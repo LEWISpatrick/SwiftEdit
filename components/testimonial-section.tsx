@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 const testimonials = [
   {
-    quote: "I can't wait to get my hands on SwiftEdit! The pre-order deal is unbeatable.",
+    quote: "I cant wait to get my hands on SwiftEdit! The pre-order deal is unbeatable.",
     author: "Alex Johnson, Tech Reviewer"
   },
   {
@@ -14,15 +14,15 @@ const testimonials = [
     author: "Sarah Lee, Cooking Channel"
   },
   {
-    quote: "The AI subtitle feature alone is worth the pre-order price. It's incredibly accurate!",
+    quote: "The AI subtitle feature alone is worth the pre-order price. Its incredibly accurate!",
     author: "Mike Brown, Travel Vlogger"
   },
   {
-    quote: "I've been waiting for a tool like SwiftEdit. Can't believe it's launching so soon!",
+    quote: "Ive been waiting for a tool like SwiftEdit. Cant believe its launching so soon!",
     author: "Emma Watson, Beauty Influencer"
   },
   {
-    quote: "SwiftEdit is set to revolutionize video editing for small creators. I'm all in!",
+    quote: "SwiftEdit is set to revolutionize video editing for small creators. Im all in!",
     author: "David Chen, Tech Startup Founder"
   },
   {
