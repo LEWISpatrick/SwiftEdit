@@ -9,7 +9,7 @@ export default function Header() {
           SwiftEdit
         </Link>
         <nav>
-          <Button variant="ghost" className="text-[#0A2540] hover:text-[#007BFF]">
+          <Button variant="ghost" className="text-[#0A2540]  hover:text-[#007BFF]">
             Login
           </Button>
           <Button className="ml-4 bg-[#007BFF] hover:bg-[#0056b3] text-white rounded-full">
