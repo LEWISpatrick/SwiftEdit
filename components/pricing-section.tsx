@@ -1,40 +1,46 @@
 import { Button } from "@/components/ui/button"
+import { Check } from 'lucide-react'
 
 const pricingPlans = [
   {
-    title: "Per Video",
+    title: "Pre-order Lifetime Access",
     price: "$5",
-    description: "Perfect for occasional use",
-    features: ["AI subtitle generation", "Silence removal", "One-time payment"]
-  },
-  {
-    title: "Lifetime Access",
-    price: "$30",
-    description: "Best value for regular creators",
-    features: ["Unlimited video processing", "All features included", "Future updates"]
+    originalPrice: "$50",
+    description: "Limited time offer",
+    features: [
+      "AI subtitle generation",
+      "Silence removal",
+      "Unlimited video processing",
+      "All future updates",
+      "90% discount"
+    ]
   }
 ]
 
 export default function PricingSection() {
   return (
-    <section className="w-full py-20 bg-white" id="pricing">
+    <section id="pricing" className="w-full py-20 ">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0A2540] mb-12">
-          Fair Pricing for Creators
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-[#0A2540] mb-16">
+          Exclusive Pre-order Offer
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="max-w-md mx-auto">
           {pricingPlans.map((plan, index) => (
-            <div key={index} className="border border-gray-200 rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
-              <p className="text-4xl font-bold text-[#007BFF] mb-4">{plan.price}</p>
+            <div key={index} className="border-2 border-[#007BFF] rounded-lg p-8 text-center bg-white/50 backdrop-blur-sm transition-all hover:shadow-lg hover:-translate-y-1">
+              <h3 className="text-2xl font-bold mb-2 text-[#0A2540]">{plan.title}</h3>
+              <p className="text-5xl font-bold text-[#007BFF] mb-2">{plan.price}</p>
+              <p className="text-xl text-gray-500 line-through mb-4">{plan.originalPrice}</p>
               <p className="text-gray-600 mb-6">{plan.description}</p>
-              <ul className="mb-8">
+              <ul className="mb-8 text-left">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="mb-2">{feature}</li>
+                  <li key={i} className="mb-2 flex items-center text-gray-700">
+                    <Check className="w-5 h-5 mr-2 text-green-500" />
+                    {feature}
+                  </li>
                 ))}
               </ul>
-              <Button className="bg-[#007BFF] hover:bg-[#0056b3] text-white w-full">
-                Choose Plan
+              <Button className="bg-[#007BFF] hover:bg-[#0056b3] text-white w-full text-lg py-6 rounded-full transition-transform hover:scale-105">
+                Pre-order Now
               </Button>
             </div>
           ))}

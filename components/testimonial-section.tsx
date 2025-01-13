@@ -6,16 +6,28 @@ import { Button } from "@/components/ui/button"
 
 const testimonials = [
   {
-    quote: "SwiftEdit has revolutionized my workflow. I can focus on creating content, not editing it.",
+    quote: "I can't wait to get my hands on SwiftEdit! The pre-order deal is unbeatable.",
     author: "Alex Johnson, Tech Reviewer"
   },
   {
-    quote: "The AI subtitle feature is a game-changer. It's accurate and saves me hours of work.",
+    quote: "As a beta tester, I can confirm that SwiftEdit is a game-changer for content creators.",
     author: "Sarah Lee, Cooking Channel"
   },
   {
-    quote: "Simple, fast, and effective. SwiftEdit is now an essential part of my video production process.",
+    quote: "The AI subtitle feature alone is worth the pre-order price. It's incredibly accurate!",
     author: "Mike Brown, Travel Vlogger"
+  },
+  {
+    quote: "I've been waiting for a tool like SwiftEdit. Can't believe it's launching so soon!",
+    author: "Emma Watson, Beauty Influencer"
+  },
+  {
+    quote: "SwiftEdit is set to revolutionize video editing for small creators. I'm all in!",
+    author: "David Chen, Tech Startup Founder"
+  },
+  {
+    quote: "The silence removal feature is a lifesaver. No more tedious manual editing!",
+    author: "Olivia Rodriguez, Lifestyle Blogger"
   }
 ]
 
@@ -31,22 +43,22 @@ export default function TestimonialSection() {
   }
 
   return (
-    <section className="w-full py-20 bg-gray-50">
+    <section className="w-full py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0A2540] mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-[#0A2540] mb-16">
           Loved by Small Creators Everywhere
         </h2>
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <p className="text-xl italic mb-4">"{testimonials[currentIndex].quote}"</p>
-            <p className="text-right font-semibold">- {testimonials[currentIndex].author}</p>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/50 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+            <p className="text-2xl italic mb-6 text-gray-700">"{testimonials[currentIndex].quote}"</p>
+            <p className="text-right font-semibold text-[#007BFF] text-lg">- {testimonials[currentIndex].author}</p>
           </div>
           <div className="flex justify-center mt-8">
-            <Button variant="outline" onClick={prevTestimonial} className="mr-4">
-              <ChevronLeft className="h-4 w-4" />
+            <Button variant="outline" onClick={prevTestimonial} className="mr-4 text-[#0A2540] hover:bg-[#007BFF] hover:text-white">
+              <ChevronLeft className="h-6 w-6" />
             </Button>
-            <Button variant="outline" onClick={nextTestimonial}>
-              <ChevronRight className="h-4 w-4" />
+            <Button variant="outline" onClick={nextTestimonial} className="text-[#0A2540] hover:bg-[#007BFF] hover:text-white">
+              <ChevronRight className="h-6 w-6" />
             </Button>
           </div>
         </div>
