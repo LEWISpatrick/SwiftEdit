@@ -9,7 +9,7 @@ export default function Header() {
           SwiftEdit
         </Link>
         <nav>
-          <Link href='/register'>
+          {/* <Link href='/register'>
           <Button variant="ghost" className="text-[#0A2540]  hover:text-[#007BFF]">
             Login
           </Button>          
@@ -19,7 +19,7 @@ export default function Header() {
                         Sign Up
                       </Button>
           </Link>
-         
+          */}
         </nav>
       </div>
     </header>
