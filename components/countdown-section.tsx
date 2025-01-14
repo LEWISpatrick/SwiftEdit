@@ -10,7 +10,6 @@ export default function CountdownSection() {
         <div className="flex justify-center space-x-4">
             <div  className="text-center">
               <div className="text-4xl font-bold">10/Feb</div>
-              <div className="text-sm uppercase">2025</div>
             </div>
         </div>
       </div>
