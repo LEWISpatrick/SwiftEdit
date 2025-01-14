@@ -1,6 +1,8 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
+import { signinWithGoogle } from "../utills/actions"
 
 export default function SignupPage() {
   return (
@@ -11,13 +13,12 @@ export default function SignupPage() {
           <CardDescription>Create your account to get started</CardDescription>
         </CardHeader>
         <CardContent className="flex justify-center items-center">
-
-            <Button className="w-full">
-                Sign up with Google
-            </Button>
+        <form action={signinWithGoogle}>
+  <Button className="btn w-full" type="submit">
+    Sign up with Google
+  </Button>
+</form>
         </CardContent>
-
-       
       </Card>
     </div>
   )
