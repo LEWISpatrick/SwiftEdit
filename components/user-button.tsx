@@ -30,21 +30,7 @@ export const UserButton = () => {
       href: '/dashboard',
       icon: LayoutDashboard
     },
-    {
-      label: 'Docs',
-      href: '/docs',
-      icon: Book
-    },
-    {
-      label: 'Billing',
-      href: '/payments',
-      icon: CreditCard
-    },
-    {
-      label: 'Settings',
-      href: '/settings',
-      icon: Settings
-    }
+   
   ]
   // Random gradient colors for Avatar
 
@@ -56,7 +42,7 @@ export const UserButton = () => {
   }
   const Logout = () => {
     signOut()
-    router.push('/login')
+    router.push('/register')
   }
 
   return (

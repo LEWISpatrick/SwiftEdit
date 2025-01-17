@@ -10,8 +10,8 @@ import Header from '@/components/header'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '',
-  description: ''
+  title: 'SwiftEdit 💻👀',
+  description: 'Edit fast 🍑💨'
 }
 
 export default async function RootLayout({
