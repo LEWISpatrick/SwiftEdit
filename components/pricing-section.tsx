@@ -1,3 +1,4 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import { Check } from 'lucide-react'
 
@@ -39,9 +40,20 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <Button className="bg-[#007BFF] hover:bg-[#0056b3] text-white w-full text-lg py-6 rounded-full transition-transform hover:scale-105">
-                Pre-order Now
-              </Button>
+              <Button 
+  className="bg-[#007BFF] hover:bg-[#0056b3] text-white w-full text-lg py-6 rounded-full transition-transform hover:scale-105"
+  onClick={() => {
+    const newTab = window.open('https://buy.stripe.com/fZe3fb3f5bwFaTS8wC', '_blank');
+    if (newTab) {
+      newTab.focus();
+    } else {
+      alert('Please allow popups for this website');
+    }
+  }}
+>
+  Pre-order Now
+</Button>
+
             </div>
           ))}
         </div>

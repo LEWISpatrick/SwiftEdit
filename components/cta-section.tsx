@@ -6,7 +6,7 @@ export default function CtaSection() {
     <section className="w-full py-20 bg-gradient-to-r from-[#0A2540] to-[#1E3A8A] text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Dont Miss This Limited-Time Offer!
+          Don't Miss This Limited-Time Offer!
         </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Get lifetime access to SwiftEdit for just $5 during our pre-order period. Transform your video editing process today!

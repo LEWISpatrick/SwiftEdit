@@ -1,27 +1,35 @@
-import './globals.css'
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import './globals.css'
+import { ThemeProvider } from '@/components/ui/theme-provider'
+import { ToastProvider } from '@/components/providers/toaster-provider'
+import { SessionProvider } from 'next-auth/react'
+import { auth } from '@/auth'
 import Header from '@/components/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'SwiftEdit - AI-Powered Video Editing for YouTubers',
-  description: 'Effortlessly add subtitles and remove silences with AI-powered editing.',
+export const metadata: Metadata = {
+  title: '',
+  description: ''
 }
 
-export default function RootLayout({
-  children,
-}: {
+export default async function RootLayout({
+  children
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
+  const session = await auth()
   return (
-    <html lang="en">
-      <body className={`${inter.className} relative`}>
-        <div className="fixed inset-0 -z-10 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <SessionProvider session={session}>
+      <html lang="en">
+        <body className={inter.className}>
+         
+            <Header/>
+            {children}
+   
+        </body>
+      </html>
+    </SessionProvider>
   )
 }
-
